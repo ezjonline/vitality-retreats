@@ -5,6 +5,9 @@ type AddOn = {
   title: string
   price: number
   description: string
+  deliverables?: string[]
+  closer?: string
+  warning?: string
 }
 
 const ADD_ONS: AddOn[] = [
@@ -31,10 +34,19 @@ const ADD_ONS: AddOn[] = [
   },
   {
     id: 'testimonials',
-    title: 'Participant Testimonial Edits (Up to 4)',
-    price: 500,
+    title: 'Testimonials & Case Studies (Up to 4 participants + Brenda)',
+    price: 600,
     description:
-      'Individual 30 to 60 second edited testimonials from up to four participants. The highest converting social proof you can run for the October waitlist.',
+      "A dedicated interview session on the final day of the retreat. Four participants each sit down to share their experience, and Brenda sits down separately to tell the story of Vitality. Her perspective, her vision, and what this retreat means in her own words.",
+    deliverables: [
+      'Four individual vertical case study edits, 30 to 60 seconds each, intercut with b-roll of that participant throughout the week. Ready to run as ads for the October waitlist.',
+      "Brenda's interview captured in full, with select moments used as voiceover throughout the master edit. Her voice becomes the narrative thread tying the week together.",
+      'The strongest participant testimonial moments are also woven into the master edit.',
+    ],
+    closer:
+      'This is the upgrade that turns the master from a visual recap into a story with voices. Brenda narrating, participants providing proof. The single highest leverage addition for future retreat marketing.',
+    warning:
+      'Without this add on, no interviews will be recorded. The master edit and short form reels will be fully visual, with no participant voiceover or interview content.',
   },
   {
     id: 'raw-footage',
@@ -228,6 +240,26 @@ export default function App() {
                       <p className="text-ink/75 leading-relaxed text-[15px] md:text-base">
                         {a.description}
                       </p>
+                      {a.deliverables && (
+                        <ul className="mt-4 space-y-3 text-ink/75 text-[14px] md:text-[15px]">
+                          {a.deliverables.map((d, di) => (
+                            <li key={di} className="flex gap-3 leading-relaxed">
+                              <span className="mt-[9px] shrink-0 w-[5px] h-[5px] rounded-full bg-terracotta" />
+                              <span>{d}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                      {a.closer && (
+                        <p className="mt-4 text-ink/75 leading-relaxed text-[15px] md:text-base">
+                          {a.closer}
+                        </p>
+                      )}
+                      {a.warning && (
+                        <p className="mt-4 text-ink/55 italic leading-relaxed text-[13px] md:text-sm border-l-2 border-terracotta/30 pl-4">
+                          {a.warning}
+                        </p>
+                      )}
                     </div>
                   </div>
                 </label>
