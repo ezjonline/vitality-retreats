@@ -23,7 +23,7 @@ const ADD_ONS: AddOn[] = [
     title: 'Retreat Photography',
     price: 500,
     description:
-      'Edited still photography across the full retreat. 60 to 80 final images covering portraits, candid moments, landscape, and group shots. The stills serve two sides: participants get a keepsake from the week, and you get a marketing arsenal for future retreats. Website imagery, organic Instagram, paid ads. Delivered alongside video within 14 days.',
+      'Edited still photography across the full retreat. 60 to 80 final images covering portraits, candid moments, landscape, and group shots. The stills serve two sides: participants get a keepsake from the week, and you get a marketing arsenal for future retreats. Website imagery, organic Instagram, paid ads.',
   },
   {
     id: 'extra-reels',
@@ -53,7 +53,7 @@ const ADD_ONS: AddOn[] = [
     title: 'Raw Footage Archive',
     price: 500,
     description:
-      'Every unedited clip from the six day shoot delivered via cloud. Hundreds of gigabytes of raw material you can pull from later for additional edits, internal use, or archival. Without this, raw footage stays on my drives and is not available for future use.',
+      'Full resolution, downloadable access to all raw footage from the retreat. Drone, GoPro, phone, main camera, organized into categorical subfolders for easy access.',
   },
 ]
 
@@ -193,7 +193,7 @@ export default function App() {
                 'Pre retreat planning call & custom shot list aligned to your itinerary',
                 '2 rounds of revisions per deliverable',
                 'All final deliverables delivered in 4K within 30 days',
-                "Private accommodation required. If the Renewal Dome or another private room at Makalele is available, I'll take that. If not, Mentigi Bay Dome Villa Lombok (walking distance) at ~3.6M IDR for the 6 nights. Either way, client covered, since the nightly edit + upload workflow requires a dedicated space.",
+                'Private accommodation required. Ideally a private room at Makalele, or Mentigi Bay Dome Villa Lombok just down the road.',
               ].map((item, i) => (
                 <li key={i} className="flex gap-4 leading-relaxed">
                   <span className="mt-[11px] shrink-0 w-[5px] h-[5px] rounded-full bg-terracotta" />
@@ -281,7 +281,7 @@ export default function App() {
         <section className="py-16 md:py-20 border-t border-ink/10">
           <p className="eyebrow text-sage mb-6">What's Not Included</p>
           <ul className="space-y-3 text-sm md:text-[15px] text-ink/60 leading-relaxed">
-            <li>Travel to Lombok: round trip flight from Bali (~$100 USD) covered by client. I'll book and forward the receipt.</li>
+            <li>Round trip flight to and from Bali covered by the client.</li>
             <li>Meals outside retreat schedule</li>
           </ul>
         </section>
@@ -325,10 +325,9 @@ export default function App() {
             Brenda, our call landed easy and I think we're genuinely aligned
             on the vision and how we operate. I've spent the last four years
             filming retreats all over the world and I know how to capture the
-            nervous system work, the flow sessions, and the moments in between
-            that aren't on the itinerary that actually sell the next retreat.
-            You're in good hands and I look forward to creating something
-            magical together.
+            full experience, plus the moments you don't plan for. Those are
+            what sell the next retreat. You're in good hands and I look
+            forward to creating something magical together.
           </p>
           <a
             href="https://youtube.com/playlist?list=PLJQqxgbEUBec3px7QuAj0H2sE7ovYKKzs"
