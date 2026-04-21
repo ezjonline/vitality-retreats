@@ -112,7 +112,12 @@ export default function App() {
     [selectedAddOns]
   )
 
+  const dueToday = useMemo(() => Math.round(total * 0.75), [total])
+  const dueOnDelivery = useMemo(() => total - dueToday, [total, dueToday])
+
   const animatedTotal = useCountUp(total, 300)
+  const animatedDueToday = useCountUp(dueToday, 300)
+  const animatedDueOnDelivery = useCountUp(dueOnDelivery, 300)
 
   const whatsappHref = useMemo(() => {
     const lines = [
@@ -122,12 +127,14 @@ export default function App() {
       ...selectedAddOns.map((a) => `• ${a.title} (${formatUSD(a.price)})`),
       '',
       `Total: ${formatUSD(total)}`,
+      `Due today (75%): ${formatUSD(dueToday)}`,
+      `Due on delivery (25%): ${formatUSD(dueOnDelivery)}`,
       '',
       "Let's lock it.",
     ]
     const message = lines.join('\n')
     return `https://wa.me/15053633485?text=${encodeURIComponent(message)}`
-  }, [selectedAddOns, total])
+  }, [selectedAddOns, total, dueToday, dueOnDelivery])
 
   return (
     <div className="min-h-screen bg-bg text-ink pb-40 md:pb-20">
@@ -274,7 +281,6 @@ export default function App() {
           <ul className="space-y-3 text-sm md:text-[15px] text-ink/60 leading-relaxed">
             <li>Flights to and from Lombok (Ethan handles his own travel from Bali)</li>
             <li>Meals outside retreat schedule</li>
-            <li>Usage beyond agreed deliverables (additional edits priced at $200 each after delivery)</li>
           </ul>
         </section>
 
@@ -372,9 +378,37 @@ export default function App() {
               </p>
             </div>
 
+            <div className="mt-8 border border-ink/10 rounded-sm divide-y divide-ink/10">
+              <div className="flex justify-between items-baseline gap-4 px-5 md:px-6 py-5">
+                <div>
+                  <p className="eyebrow text-terracotta text-[10px]">
+                    Due today · 75%
+                  </p>
+                  <p className="text-[13px] text-ink/55 mt-1">
+                    Confirms the booking &amp; travel
+                  </p>
+                </div>
+                <p className="font-display text-2xl md:text-3xl whitespace-nowrap text-terracotta">
+                  {formatUSD(animatedDueToday)}
+                </p>
+              </div>
+              <div className="flex justify-between items-baseline gap-4 px-5 md:px-6 py-5">
+                <div>
+                  <p className="eyebrow text-ink/40 text-[10px]">
+                    Due on delivery · 25%
+                  </p>
+                  <p className="text-[13px] text-ink/55 mt-1">
+                    Paid when all deliverables land
+                  </p>
+                </div>
+                <p className="font-display text-2xl md:text-3xl whitespace-nowrap text-ink/70">
+                  {formatUSD(animatedDueOnDelivery)}
+                </p>
+              </div>
+            </div>
+
             <p className="text-sm text-ink/55 mt-6">
-              75% deposit confirms the booking and travel. Remaining 25% due
-              upon final delivery. Selections are final once confirmed.
+              Selections are final once confirmed.
             </p>
           </div>
         </section>
