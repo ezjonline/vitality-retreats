@@ -37,16 +37,7 @@ const ADD_ONS: AddOn[] = [
     title: 'Testimonials & Case Studies (Up to 4 participants + Brenda)',
     price: 600,
     description:
-      "A dedicated interview session on the final day of the retreat. Four participants each sit down to share their experience, and Brenda sits down separately to tell the story of Vitality. Her perspective, her vision, and what this retreat means in her own words.",
-    deliverables: [
-      'Four individual vertical case study edits, 30 to 60 seconds each, intercut with b-roll of that participant throughout the week. Ready to run as ads for the October waitlist.',
-      "Brenda's interview captured in full, with select moments used as voiceover throughout the master edit. Her voice becomes the narrative thread tying the week together.",
-      'The strongest participant testimonial moments are also woven into the master edit.',
-    ],
-    closer:
-      'This is the upgrade that turns the master from a visual recap into a story with voices. Brenda narrating, participants providing proof. The single highest leverage addition for future retreat marketing.',
-    warning:
-      'Without this add on, no interviews will be recorded. The master edit and short form reels will be fully visual, with no participant voiceover or interview content.',
+      "A dedicated interview session on the final day. Four participants sit down to share their experience on camera, and Brenda sits down separately to tell the story of Vitality in her own words. Each participant gets a 30 to 60 second case study edit ready to run as ads, and Brenda's voice becomes the narrative thread through the master edit.",
   },
   {
     id: 'raw-footage',
