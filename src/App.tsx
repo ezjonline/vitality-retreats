@@ -121,8 +121,6 @@ export default function App() {
       `Due today (75%): ${formatUSD(dueToday)}`,
       `Due on delivery (25%): ${formatUSD(dueOnDelivery)}`,
       '',
-      "Travel (flight + accommodation) reimbursed at cost, around $400 total. I'll handle the booking so you don't have to think about it.",
-      '',
       "Let's lock it.",
     ]
     const message = lines.join('\n')
