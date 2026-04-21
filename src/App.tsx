@@ -130,6 +130,8 @@ export default function App() {
       `Due today (75%): ${formatUSD(dueToday)}`,
       `Due on delivery (25%): ${formatUSD(dueOnDelivery)}`,
       '',
+      "Travel (flight + accommodation) reimbursed at cost, around $400 total. I'll handle the booking so you don't have to think about it.",
+      '',
       "Let's lock it.",
     ]
     const message = lines.join('\n')
@@ -191,7 +193,7 @@ export default function App() {
                 'Pre retreat planning call & custom shot list aligned to your itinerary',
                 '2 rounds of revisions per deliverable',
                 'All final deliverables delivered in 4K within 30 days',
-                "Private accommodation arranged. If the Renewal Dome or another private room on site is not available, I can arrange my own at Mentigi Bay Dome Villa Lombok (walking distance, covered at my own expense). Either way, I'll be set up to edit and upload nightly.",
+                "Private accommodation required. If the Renewal Dome or another private room at Makalele is available, I'll take that. If not, Mentigi Bay Dome Villa Lombok (walking distance) at ~3.6M IDR for the 6 nights. Either way, client covered, since the nightly edit + upload workflow requires a dedicated space.",
               ].map((item, i) => (
                 <li key={i} className="flex gap-4 leading-relaxed">
                   <span className="mt-[11px] shrink-0 w-[5px] h-[5px] rounded-full bg-terracotta" />
@@ -279,7 +281,7 @@ export default function App() {
         <section className="py-16 md:py-20 border-t border-ink/10">
           <p className="eyebrow text-sage mb-6">What's Not Included</p>
           <ul className="space-y-3 text-sm md:text-[15px] text-ink/60 leading-relaxed">
-            <li>Flights to and from Lombok (Ethan handles his own travel from Bali)</li>
+            <li>Travel to Lombok: round trip flight from Bali (~$100 USD) covered by client. I'll book and forward the receipt.</li>
             <li>Meals outside retreat schedule</li>
           </ul>
         </section>
